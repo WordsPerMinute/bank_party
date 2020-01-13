@@ -13,5 +13,7 @@ class Customer
         @@all
     end
 
-    
+    def accounts
+        Account.all.select {|account| account.customer == self}
+    end
 end
